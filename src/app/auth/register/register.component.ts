@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { AuthService } from 'src/app/auth.service';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
     repeatPassword: new FormControl('',[Validators.required,
       this.passwordsMatch ])
    });
-  constructor(private router:Router ,private authService:AuthService) { }
+  constructor(private router:Router ,private  authService:AuthService) { }
   get fullName(){
     return this.userGroup.get('fullName');
   }
