@@ -8,9 +8,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProductsModule } from './products/products.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
+import { BlocksModule } from './blocks/blocks.module';
 
-
-import { AppComponent } from './app.component';
+import { AppComponent } from './blocks/root/app.component';
 import { HomeComponent } from './home/home.component';
 // import { LoginComponent } from './login/login.component';         // imported in auth module
 // import { RegisterComponent } from './register/register.component';
@@ -21,9 +21,10 @@ import { AuthHeaderInterceptorService } from './interceptor/auth-header-intercep
 
 
 
+
 @NgModule({
   declarations: [
-    AppComponent,
+    //AppComponent,
     HomeComponent
   
   ],
@@ -35,7 +36,8 @@ import { AuthHeaderInterceptorService } from './interceptor/auth-header-intercep
     HttpClientModule,
     PmMaterialModule,
     SharedModule,
-    AuthModule
+    AuthModule,
+    BlocksModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
