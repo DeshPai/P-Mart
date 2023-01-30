@@ -2,7 +2,7 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/c
 import { Injectable } from '@angular/core';
 //import { request } from 'node:http';
 import { Observable } from 'rxjs';
-import { TokenstorageService } from '../tokenstorage.service';
+import { TokenstorageService } from '../auth/tokenstorage.service';
 
 @Injectable({
   providedIn: 'root'

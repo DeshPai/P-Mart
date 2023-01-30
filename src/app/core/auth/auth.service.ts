@@ -4,9 +4,9 @@ import { Observable } from 'rxjs';
 import { EMPTY } from 'rxjs';
 import { of, Subject, throwError } from 'rxjs';
 import { catchError, switchMap } from 'rxjs/operators';
-import { LogService } from './core/log.service';
+import { LogService } from '../log.service';
 import { TokenstorageService } from './tokenstorage.service';
-import{User} from './user'
+import{User} from '../user'
 
 
 // export interface User{

@@ -11,21 +11,18 @@ import { AuthModule } from './auth/auth.module';
 import { BlocksModule } from './blocks/blocks.module';
 
 import { AppComponent } from './blocks/root/app.component';
-import { HomeComponent } from './home/home.component';
+//import { HomeComponent } from './home/home.component';
 // import { LoginComponent } from './login/login.component';         // imported in auth module
 // import { RegisterComponent } from './register/register.component';
-import { AuthHeaderInterceptorService } from './interceptor/auth-header-interceptor.service';
-
-
-
-
+import { AuthHeaderInterceptorService } from './core/interceptor/auth-header-interceptor.service';
+import { CoreModule } from './core/core.module';
 
 
 
 @NgModule({
   declarations: [
     //AppComponent,
-    HomeComponent
+    //HomeComponent
   
   ],
   imports: [
@@ -37,13 +34,16 @@ import { AuthHeaderInterceptorService } from './interceptor/auth-header-intercep
     PmMaterialModule,
     SharedModule,
     AuthModule,
-    BlocksModule
+    BlocksModule,
+    CoreModule
+
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: AuthHeaderInterceptorService,
-    multi:true
-  }
+  providers: [
+  //{       imported providers in core module              
+    // provide: HTTP_INTERCEPTORS,
+    // useClass: AuthHeaderInterceptorService,
+    // multi:true
+  //}
   ],
   bootstrap: [AppComponent]
 })

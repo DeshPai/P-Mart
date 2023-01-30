@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ProductDataService } from '../product-data.service';
+
+// 3 ways of importing  ProductDataService 
+//import { ProductDataService } from '../../core/products/product-data.service';
+
+// Dynamic paths set for @core in tsconfig.json 
+//import { ProductDataService } from '@core/products/product-data.service';
+
+// Dynamic import path for @core in Barrel File (src/app/core/index.ts) 
+import { ProductDataService } from '@core/index';
+
 
 @Component({
   selector: 'pm-products',

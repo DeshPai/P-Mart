@@ -8,13 +8,13 @@ const routes: Routes = [
   {
     path:'',
     pathMatch:'full',
-    redirectTo :'home'
+    redirectTo :'products'
  }, 
- {
-  path:'home',
-  pathMatch:'full',
-  component:HomeComponent
-},
+//  {      home componrnt not require in the application.
+//   path:'home',
+//   pathMatch:'full',
+//   component:HomeComponent
+// },
   {
     path:'products',
     pathMatch:'full',
