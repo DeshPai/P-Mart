@@ -1,19 +1,12 @@
-<header>
+     <!-- 
  
-<mat-toolbar  color="primary"> 
-     <mat-toolbar-row>
-     <!-- <button 
-      mat-icon-button
-      (click)="sidenav.toggle()"
-      fxShow="false"
-      fxHide.gt-sm
-      >
-     <mat-icon>menu</mat-icon>
-    </button> -->
+ <header>
+ 
     <a   class="logo"    [routerLink]="['/']"   ></a>
     <span class="left-spacer"></span> 
-    <!-- <a mat-button routerLink="/home" routerLinkActive="active-link">Home</a>  -->
-    <a  mat-button routerLink="/products" routerLinkActive="active-link">Products</a>
+     <a mat-button routerLink="/home" routerLinkActive="active-link">Home</a>  -->  
+
+       <!-- <a  mat-button routerLink="/products" routerLinkActive="active-link">Products</a>
     <span class="spacer"></span>
     <a *ngIf="!user"
          mat-button 
@@ -29,7 +22,7 @@
       </div>
       </mat-toolbar-row>
 
-</mat-toolbar>
+</mat-toolbar> -->
  <!-- MObile View -->
 <!-- <mat-sidenav-container  fxFlexFill>
   <mat-sidenav #sidenav>
@@ -42,8 +35,10 @@
     <router-outlet>  </router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container> -->
- <!-- MObile View End -->
-
+ <!-- MObile View End
 </header>
+-->
 
+
+<pm-header [user]="user | async" (logoutEvent)="logout()"></pm-header>
 <router-outlet></router-outlet>

@@ -16,6 +16,8 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     BlocksRoutingModule,
     SharedModule
+  ],exports:[
+    HeaderComponent,
   ]
 })
 export class BlocksModule { }
